@@ -35,7 +35,8 @@ paths:
                     properties:
                       lon:
                         type: number
-                        description: 'example: 145.77'
+                        description: 'City geo location, longitude'
+                        example: 145.77
                       lat:
                         type: number
                   weather:
@@ -44,7 +45,7 @@ paths:
                       type: object
                       properties:
                         id:
-                          type: integer
+                          type: number
                         main:
                           type: string
                         description:
@@ -57,55 +58,57 @@ paths:
                     type: object
                     properties:
                       temp:
-                        type: string
+                        type: number
                       feels_like:
-                        type: string
+                        type: number
                       temp_min:
-                        type: string
+                        type: number
                       temp_max:
-                        type: string
+                        type: number
                       pressure:
-                        type: string
+                        type: number
                       humidity:
-                        type: string
+                        type: number
                   visibility:
-                    type: integer
+                    type: number
                   wind:
                     type: object
                     properties:
                       speed:
-                        type: string
+                        type: number
+                        example: '5.1'
+                        description: '''Wind speed. Unit Default: meter/sec, Metric: meter/sec, Imperial: miles/hour.'''
                       deg:
-                        type: string
+                        type: number
                   clouds:
                     type: object
                     properties:
                       all:
-                        type: string
+                        type: number
                   dt:
-                    type: string
+                    type: number
                   sys:
                     type: object
                     description: Internal parameter
                     properties:
                       type:
-                        type: string
+                        type: number
                       id:
-                        type: string
+                        type: number
                       country:
                         type: string
                       sunrise:
-                        type: string
+                        type: number
                       sunset:
-                        type: string
+                        type: number
                   timezone:
-                    type: string
+                    type: number
                   id:
-                    type: string
+                    type: number
                   name:
                     type: string
                   cod:
-                    type: string
+                    type: number
       description: 'Access current weather data for any location on Earth including over 200,000 cities! Current weather is frequently updated based on global models and data from more than 40,000 weather stations.'
       parameters:
         - schema:
